@@ -200,9 +200,7 @@ img {
   background-color: var(--color-bg);
 }
 
-.bg-dark {
-  background-color: var(--color-primary);
-}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
@@ -1352,5 +1350,27 @@ address {
 @media (max-width: 575px) {
   .c-button {
     width: 100%;
+  }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }

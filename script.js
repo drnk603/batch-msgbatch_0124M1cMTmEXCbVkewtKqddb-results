@@ -14,19 +14,19 @@
 
     const VALIDATION_RULES = {
         firstName: {
-            pattern: /^[a-zA-ZÀ-ÿs'-]{2,50}$/,
+            pattern: /^[a-zA-ZÀ-ÿ\s'-]{2,50}$/,
             message: 'Vorname muss 2-50 Zeichen enthalten (nur Buchstaben, Leerzeichen, Bindestrich, Apostroph)'
         },
         lastName: {
-            pattern: /^[a-zA-ZÀ-ÿs'-]{2,50}$/,
+            pattern: /^[a-zA-ZÀ-ÿ\s'-]{2,50}$/,
             message: 'Nachname muss 2-50 Zeichen enthalten (nur Buchstaben, Leerzeichen, Bindestrich, Apostroph)'
         },
         email: {
-            pattern: /^[^s@]+@[^s@]+.[^s@]+$/,
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             message: 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
         },
         phone: {
-            pattern: /^[ds+-()]{10,20}$/,
+            pattern: /^[\d\s+\-()]{10,20}$/,
             message: 'Telefonnummer muss 10-20 Zeichen enthalten (Ziffern, Leerzeichen, +, -, (, ) erlaubt)'
         },
         message: {
@@ -34,7 +34,7 @@
             message: 'Nachricht muss mindestens 10 Zeichen enthalten'
         },
         company: {
-            pattern: /^[a-zA-ZÀ-ÿ0-9s'-.&]{2,100}$/,
+            pattern: /^[a-zA-ZÀ-ÿ0-9\s'-.&]{2,100}$/,
             message: 'Firmenname muss 2-100 Zeichen enthalten'
         }
     };
